@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Hydac123
 {
@@ -24,7 +23,6 @@ namespace Hydac123
 
                 if (kodeord == "123")
                 {
-
                     while (kør)
                     {
                         Console.WriteLine("+--------------------------+");
@@ -38,7 +36,6 @@ namespace Hydac123
                         string valg = Console.ReadLine();
                         Console.Clear();
 
-
                         switch (valg)
                         {
                             case "1":
@@ -46,18 +43,23 @@ namespace Hydac123
                                 Console.Clear();
                                 break;
 
-
                             case "2":
                                 guestlog.ShowGuestlog();
-                                Console.WriteLine("\n" + "Tryk på en tilfældig knap for at komme tilbage til menuen");
+                                Console.WriteLine("\nTryk på en tilfældig knap for at komme tilbage til menuen");
                                 Console.ReadLine();
                                 Console.Clear();
                                 break;
 
                             case "3":
-                                Console.Write("Indtast navn på gæst der skal redigeres: ");
+                                Console.Write("Indtast navn på gæst der skal tjekkes ud: ");
                                 string name = Console.ReadLine();
                                 guestlog.EditGuest(name);
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+
+                            default:
+                                Console.WriteLine("Ugyldigt valg. Prøv igen.");
                                 Console.ReadLine();
                                 Console.Clear();
                                 break;
@@ -72,7 +74,5 @@ namespace Hydac123
                 }
             }
         }
-
-
     }
 }
