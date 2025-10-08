@@ -9,9 +9,9 @@ namespace Hydac123
 
     public class GuestLog
     {
-        static List<GuestLog> guests = new List<GuestLog>(); //List laver en liste hvor du kan tilføje og fjerne elementer
+        static List<GuestLog> guests = new List<GuestLog>(); 
 
-        private DateTime date; //DateTime er en datatype til at gemme dato og tid
+        private DateTime date; 
         private string name;
         private string company;
         private string responsible;
@@ -19,7 +19,7 @@ namespace Hydac123
         private string safteyfolder;
         private string conferenceroom;
 
-        
+
 
 
         public void GuestInformation()
@@ -63,8 +63,8 @@ namespace Hydac123
         }
         public void AddGuest()
         {
-            GuestLog guest = new GuestLog(); // opretter et nyt objekt i klassen (GuestLog) og laver en ny kopi af klassen
-            guest.GuestInformation(); // gæst er her brugt til at kalde på en metode
+            GuestLog guest = new GuestLog(); 
+            guest.GuestInformation(); 
             guests.Add(guest);
         }
 
@@ -75,7 +75,7 @@ namespace Hydac123
                 guest.Guestlog();
             }
         }
-        public void EditGuest (string searchname)
+        public void EditGuest(string searchname)
         {
             date = DateTime.Now;
             var guest = guests.Find(g => g.name == searchname);
@@ -92,18 +92,6 @@ namespace Hydac123
                 Console.WriteLine("\n" + "Tryk på en tilfældig knap for at komme tilbage til menuen");
             }
         }
-
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-//Tilføj GemTilFil og Gæst søgning

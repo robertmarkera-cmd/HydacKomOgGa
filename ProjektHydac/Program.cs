@@ -46,6 +46,7 @@ namespace Hydac123
                                 Console.Clear();
                                 break;
 
+
                             case "2":
                                 guestlog.ShowGuestlog();
                                 Console.WriteLine("\n" + "Tryk på en tilfældig knap for at komme tilbage til menuen");
